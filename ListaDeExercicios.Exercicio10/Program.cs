@@ -22,14 +22,18 @@
 
             Console.WriteLine("Informe ser altura: ");
             double altura = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("-----------------------------------------------");
             #endregion
 
             #region processamento
             double imc = peso / (altura * altura);
+            double pesoIdealMin = 18.5 * (altura * altura);
+            double pesoIdealMax = 25 * (altura * altura);
             #endregion
 
             #region output dos dados
             Console.WriteLine($"Seu IMC é: {imc:F1}");
+            Console.WriteLine("-----------------------------------------------");
 
             if (imc < 18.5)
                 Console.WriteLine("Você está abaixo do peso");
@@ -39,6 +43,9 @@
                 Console.WriteLine("Você está acima do peso");
             else
                 Console.WriteLine("Você está obeso");
+
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine($"Seu peso ideal está entre {pesoIdealMin:F2}kg e {pesoIdealMax:F2}kg.");
             #endregion
 
             Console.ReadLine();
