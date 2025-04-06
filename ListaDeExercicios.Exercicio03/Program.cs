@@ -1,31 +1,31 @@
-﻿namespace ListaDeExercicios.Exercio03
+﻿namespace ListaDeExercicios.Exercicio03
 {
     internal class Program
     {
-        /*
-         Crie um programa que calcule o consumo de combustível por quilômetro percorrido em uma viagem. O 
-         programa deve solicitar ao usuário:
-            ● A quilometragem inicial do veículo no início da viagem.
-            ● A quilometragem final ao término da viagem.
-            ● A quantidade de combustível consumida durante a viagem (em litros).
-         */
+        //crie um programa para calcular o volumme de uma caixa retangular
+        //VOLUME_DA_CAIXA = COMPRIMENTO * LARGARA * ALTURA
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite a quilometragem inicial da viagem: ");
-            double inicio = Convert.ToDouble(Console.ReadLine());
-            
-            Console.WriteLine("Digite a quilometragem final da viagem: ");
-            double termino = Convert.ToDouble(Console.ReadLine());
+            #region imput de dados
+            Console.WriteLine("Digite o comprimento da caixa: ");
+            decimal comprimento = Convert.ToDecimal(Console.ReadLine());
 
-            Console.WriteLine("Digite combustível consumida durante a viagem: ");
-            double combustível = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Digite a largura da caixa: ");
+            decimal largura = Convert.ToDecimal(Console.ReadLine());
 
-            double consumoPorkm = combustível / (termino - inicio);
+            Console.WriteLine("Digite a altura da caixa: ");
+            decimal altrura = Convert.ToDecimal(Console.ReadLine());
+            #endregion
 
-            Console.WriteLine($"O consumo de combustível por quilômetro percorrudo foi: {consumoPorkm:F2} litros/km");
+            #region processamento
+            decimal resultado = comprimento * largura * altrura;
+            #endregion
+
+            #region output dos dados
+            Console.WriteLine($"O volume da caixa é de {resultado}.");
+            #endregion
 
             Console.ReadLine();
-
         }
     }
 }
